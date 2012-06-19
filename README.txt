@@ -1,3 +1,10 @@
+v8Bind vsicc branch:
+It's forked from v8bind master branch.
+It's verified compile with intel c++ compiler vs intergated.
+And get some bug fixes and improves.
+
+==============================================================================================
+
 v8Bind
 ------
 
