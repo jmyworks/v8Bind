@@ -54,7 +54,7 @@ namespace v8Bind {
 
             typedef ReturnType (ClassType::*MemberPtrType) (Args...);
 
-            return ToV8<ReturnType>(
+            return ToV8(
                 MemberInvoker<MemberPtrType, 0, Args...>::
                     Invoke(p_that, p_member, v8Args)
             );
@@ -67,7 +67,7 @@ namespace v8Bind {
 
             typedef ReturnType (ClassType::*MemberPtrType) (Args...) const;
 
-            return ToV8<ReturnType>(
+            return ToV8(
                 MemberInvoker<MemberPtrType, 0, Args...>::
                     Invoke(p_that, p_member, v8Args)
             );

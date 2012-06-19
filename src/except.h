@@ -12,8 +12,6 @@ namespace v8Bind {
         TypeCastFailureException() : 
             std::runtime_error(TypeCastFailureException::Message) { }
     };
-    
-    const std::string TypeCastFailureException::Message = "Type conversion failure";
 
     struct ConstCastFailureException : std::runtime_error {
         static const std::string Message;
@@ -21,8 +19,6 @@ namespace v8Bind {
         ConstCastFailureException()
             :std::runtime_error(ConstCastFailureException::Message) { }
     };
-    
-    const std::string ConstCastFailureException::Message = "Const cast failure";
 
     struct NullReferenceException : std::runtime_error {
         static const std::string Message;
@@ -31,26 +27,19 @@ namespace v8Bind {
             std::runtime_error(NullReferenceException::Message) { }
     };
     
-    const std::string NullReferenceException::Message = "Holder is empty or missing.";
-
     struct InvalidOperationException : std::runtime_error {
         static const std::string Message;
 
         InvalidOperationException() : 
             std::runtime_error(InvalidOperationException::Message) { }
     };
-    
-    const std::string InvalidOperationException::Message = "Invalid operation";
-  
-    struct ArgumentCountException : std::runtime_error {
+   
+	struct ArgumentCountException : std::runtime_error {
         static const std::string Message;
 
         ArgumentCountException() : 
             std::runtime_error(ArgumentCountException::Message) { }
     };
-    
-    const std::string ArgumentCountException::Message = "Incorrect argument count";
-
 
 } // namespace v8Bind
 

@@ -6,6 +6,7 @@
 
 #include "except.h"
 #include "make_weak.h"
+#include "function_stub.h"
 
 namespace v8Bind {
 
@@ -52,8 +53,6 @@ namespace v8Bind {
         virtual void claim_ownership(void) = 0;
         virtual ~IHolder(void) = 0;
     };
-
-    IHolder::~IHolder() { }
 
     template <typename T>
     inline bool IsA(const IHolder & p) {
